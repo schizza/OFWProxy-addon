@@ -21,7 +21,7 @@ http {
     ssl_prefer_server_ciphers off;
 
     server {
-        server_name wslink_proxy;
+        server_name ofw_proxy;
 
         ssl_session_timeout 1d;
         ssl_session_cache shared:MozSSL:10m;
@@ -31,7 +31,7 @@ http {
         ssl_certificate_key /data/ssl/key.pem;
         ssl_dhparam /data/ssl/dh.params;
 
-        listen 80 ssl;
+        listen 80;
         http2 on;
 
         proxy_buffering off;
